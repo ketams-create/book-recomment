@@ -32,7 +32,7 @@ body {
 .section {
   padding: 60px 20px;
   background-color: #FFFFFF;
-  border-radius: 12px;
+  border-radius: 2px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-bottom: 40px;
 }
@@ -57,3 +57,64 @@ body {
   color: white;
 }
 
+.bg-sky-reflection {
+  background-image: url('../images/anime-style-clouds.jpg'); /* เปลี่ยนชื่อให้ตรงกับภาพที่คุณใช้ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-sky-reflection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* ปรับความโปร่งใสตามความสว่างของภาพ */
+  z-index: 0;
+}
+
+.bg-sky-reflection > * {
+  position: relative;
+  z-index: 1;
+}
+
+.safe-text {
+  font-family: 'Mitr', sans-serif;
+  color: #424242;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-question {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.safe-box {
+  background-color: rgba(250, 246, 242, 0.719); /* สีขาวโปร่งใส */
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Mitr', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+  backdrop-filter: blur(5px); /* เพิ่มความละมุน */
+  color: #363333;
+}
+.gentle-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'Mitr', sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* ให้ข้อความขาวอ่านง่ายบนพื้นฟ้า */
+  padding: 0 1rem;
+}
+.text{
+  color: #424242;
+}
